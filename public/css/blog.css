@@ -37,3 +37,11 @@ a {
     margin: 30px 0 20px 0;
   }
 
+
+  @media screen and (max-width: 576px) {
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+
