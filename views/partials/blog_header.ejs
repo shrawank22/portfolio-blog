@@ -17,17 +17,17 @@
             <div class="right menu">
                 <% if(!user){ %>
                     <div class="item">
-                        <a href="/login" class="ui button">Sign In</a>
+                        <a href="/login" >Sign In</a>
                     </div>
                     <div class="item">
-                        <a href="/register" class="ui button">Sign Up</a>
+                        <a href="/register">Sign Up</a>
                     </div>
                 <% } else { %>
                     <div class="item">
                         <a href="/users/<%= user._id %>" class="ui">Signed In As <%= user.username %></a>
                     </div>
                     <div class="item">
-                        <a href="/logout" class="ui button">Logout</a>
+                        <a href="/logout">Logout</a>
                     </div>
                 <% } %>
             </div>

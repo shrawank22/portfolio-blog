@@ -1,20 +1,24 @@
 <%- include ("../partials/blog_header") -%>
 
     <div class="ui container segment">
-    <div class="ui main text container segment">
-        <div class="ui huge header"> <%= blog.title %></div>
+        <div class="ui huge header"> 
+            <%= blog.title %>
+        </div>
         <div class="ui top attached">
             <div class="item">
-                <img style="height: 450px; width: 100%;" class="ui centered rounded image" src="<%= blog.image %>">
+                <img class="ui centered large image" src="<%= blog.image %>">
+            </div>
+            <div class="item">
+                <em>
+                    <h3>Submitted by: <a href="/users/<%= blog.author.id %>"> <%= blog.author.username %> </a> , <%= moment(blog.created).fromNow() %> </h3>
+                </em> 
+            </div>
+            <div class="item">
+                <hr style="border: 0.5px solid black; margin-top: 30px;"/>
             </div>
             <div class="content">
-                <span>
-                    <em><h3>Submitted by <a style="margin-right: 3px;" href="/users/<%= blog.author.id %>"><%= blog.author.username %> </a> - <%= moment(blog.created).fromNow() %> </h3></em> 
-                </span> 
+                <p id="contents"><%= blog.content %></p>
             </div>
-            <div style="margin: 40px 0 20px 0; " class="description">
-                <p><%= blog.content %></p>
-            </div> 
 
             <% if(user && blog.author.id.equals(user._id)){%>
                 <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit</a> 
