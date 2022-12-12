@@ -1,0 +1,36 @@
+<%- include ("../partials/blog_header") -%>
+
+    <div class="ui main text container segment">
+        <div class="ui huge header">New Blog</div>
+        <form class="ui form" action="/blogs" method="POST">
+            <div class="field">
+                <label>Category</label>
+                <input type="text" name="blog[category]" placeholder="category" required>
+            </div>
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[title]" placeholder="title" required>
+            </div>
+            <div class="field">
+                <label>Image</label>
+                <input type="text" name="blog[image]" placeholder="image" required>
+            </div>
+            <div class="field">
+                <label>Blog Content</label>
+                <textarea id="autoresizing" name="blog[content]" placeholder="blog post goes here" required></textarea>
+            </div>
+            <input class="ui violet big basic button" type="submit">
+        </form>
+    </div>
+    <script type="text/javascript">
+        textarea = document.querySelector("#autoresizing");
+        textarea.addEventListener('input', autoResize, false);
+      
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
+    </script>
+
+</body>
+</html>

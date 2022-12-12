@@ -1,0 +1,32 @@
+i.icon{
+    font-size: 2.0em;
+}
+.container.main{
+    margin-top: 7.0em;
+}
+
+#delete{
+    display: inline;
+}
+
+#autoresizing {
+    display: block; 
+    resize: none;
+}
+
+em {
+    color: blue;
+    float: right;
+    display: flex;
+}
+
+#ab {
+    font-style: oblique;
+    color: darkred;
+}
+
+
+.description {
+    font-size: medium;
+}
+

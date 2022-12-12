@@ -1,0 +1,25 @@
+<%- include("../partials/blog_header")  -%>
+
+
+    <div class="ui main text container segment">
+        <div class="ui grid">
+            <div class="eight wide column">
+                <h2>Name: <span id="ab"><%= user.name %></span></h2>
+                <img style="height: 300px; width:100%" src="<%= user.avatar %>" alt="user profile image">
+                <div>
+                    <p class="card-text">About me: </p>
+                    <a href="mailto:<%= user.email %>"><%= user.email %></a>
+                </div>
+            </div>
+            <div class="eight wide column">
+                <h3><%= user.username %>'s blogs:</h3>
+                <ol>
+                    <% blogs.forEach(function(blog) { %>
+                        <li><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></li>
+                    <% }); %>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+<%- include("../partials/blog_footer")  %>
