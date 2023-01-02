@@ -10,6 +10,7 @@ const Blogs = require('../models/Blog');
 const router = express.Router();
 
 const middleware = require('../../middleware');
+const { application } = require('express');
 
 
 //Index router
@@ -75,6 +76,11 @@ router.post("/", async (req, res)=> {
 	} catch(e) {
 		console.log(e);
 	}
+});
+
+//Cv
+router.get('/cv', (req, res)=> {
+	res.sendFile(__dirname + "/cv.pdf");
 });
 
 //Blog router 
