@@ -1,0 +1,32 @@
+<%- include ("../partials/blog_header") -%>
+
+    <div class="ui container segment">
+        <div class="ui huge header"> 
+            <%= blog.title %>
+        </div>
+        <div class="ui top attached">
+            <div class="item">
+                <img class="ui centered large image" src="<%= blog.image %>">
+            </div>
+            <div class="item">
+                <em>
+                    <h3>Submitted by: <a href="/users/<%= blog.author.id %>"> <%= blog.author.username %> </a> , <%= moment(blog.created).fromNow() %> </h3>
+                </em> 
+            </div>
+            <div class="item">
+                <hr style="border: 0.5px solid black; margin-top: 30px;"/>
+            </div>
+            <div class="content">
+                <p id="contents"><%= blog.content %></p>
+            </div>
+
+            <% if(user && blog.author.id.equals(user._id)){%>
+                <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">Edit</a> 
+                <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                    <button class="ui red basic button">Delete</button>
+                </form>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

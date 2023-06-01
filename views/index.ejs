@@ -1,0 +1,394 @@
+<%- include("partials/header") %>
+
+
+  <!--/ Intro Skew Star /-->
+  <div id="home" class="intro route bg-image"
+    style="background-image: url(https://images.unsplash.com/photo-1605478328994-f93e98217da7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1800&q=80)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4"><strong>
+              <%= homeDetails.intro %>
+            </strong></h1>
+          <p class="intro-subtitle">
+            <% for(details of homeDetails.slider) { %>
+              <span class="text-slider-items">
+                <%= details.text %>,
+              </span>
+              <%}%><strong class="text-slider"></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Intro Skew End /-->
+
+  <!--/ About Section start /-->
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/shrawan.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Shrawan Kumar</span></p>
+                      <p><span class="title-s">Profile: </span> <span>SDE</span></p>
+                      <p><span class="title-s">Email: </span> <span>shrawan8565@gmail.com</span></p>
+                      <p><span class="title-s">Phone: </span> <span>+91-6203-xxxxxx</span></p>
+                    </div>
+                    <a href="/cv" target="_blank" rel="noopener noreferrer" class="btn btn-success">Download Cv</a>
+                  </div>
+                </div>
+                <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  <span>Web Technologies (HTML, CSS, JAVASCRIPT, Node.Js)</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span>Web 3.0 & BlockChain</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Coding</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>Cybersecurity</span> <span class="pull-right">80%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">About me</h5>
+                  </div>
+                  <p class="lead">
+                    I am pursuing my M.Tech in Computer Science & Engineering(Cybersecurity Specialization) at Indian
+                    Institute of Technology, Kanpur (IIT Kanpur), currently first year student. I have pursued my
+                    Bachelors in CSE from SLIET, Longowal (2018 - 2022).
+                  </p>
+                  <p class="lead">
+                    I love to develop web applications. I have worked on many sites.Some of them are <a
+                      href="https://nyks.nic.in/">NYKS</a>, <a href="http://www.planetgreenbikes.in/">Planet Green
+                      Bikes</a> and many more.
+                  </p>
+                  <p class="lead">
+                    Currently I am exploring the world of Web 3.0 and Cybersecurity here at IIT Kanpur.
+                  </p>
+                  <p class="lead">
+                    I have recently developed this portfolio + blogging website. The Technology stacks used are html,
+                    css, javascript, node.js, express.js and mongodb. This is totally dynamic website. Anyone who want
+                    to write blog here can register themselves and after successful registration, they can login and
+                    start writing blocks. A user can view all the blogs created by other people. Also users can
+                    edit/delete the blogs owned by them. If someone forgets his/her password, they can be able to reset
+                    password as well. I have tried my label best to make it user friendly. Next I will be implemnting
+                    comments part like if someone wants to comment on any blog, he should be able to do it. Also I will
+                    be adding searching section so that any one can search the relevant blogs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ About Section end /-->
+
+  <!--/ Section Services Star /-->
+  <section id="service" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Services
+            </h3>
+            <p class="subtitle-a">
+              Dummy Data
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <% for(details of serviceDetails) { %>
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="<%= details.icon %>"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">
+                  <%= details.title %>
+                </h2>
+                <p class="s-description text-center">
+                  <%= details.desc %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Services End /-->
+
+
+  <!--/ Section Portfolio Star /-->
+  <section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Portfolio
+            </h3>
+            <p class="subtitle-a">
+              The sites on which I have worked, Let's have a look!
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="work-box">
+            <a href="img/green.JPG" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <a href="http://www.planetgreenbikes.in/">
+                  <img src="img/green.JPG" alt="" class="img-fluid">
+                </a>
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Planet Green Bikes:</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web Development</span> / <span class="w-date"></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="work-box">
+            <a href="img/nyks.JPG" data-lightbox="gallery-mf">
+              <div class="work-img">
+                <a href="https://nyks.nic.in/">
+                  <img src="img/nyks.JPG" alt="" class="img-fluid">
+                </a>
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Nehru Yuva Kendra Sangathan</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">Web App Development</span> / <span class="w-date"></span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                      <span class="ion-ios-plus-outline"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Portfolio End /-->
+
+  <!--/ Section Blog Star /-->
+  <section id="blog" class="blog-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Blog
+            </h3>
+            <p class="subtitle-a">
+              Even You can write blogs here!
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <% for(blog of blogs) { %>
+          <div class="col-md-4">
+            <div class="card card-blog">
+              <div class="card-img">
+                <img style="height: 300px; width:100%" src="<%= blog.image %>" alt="blog image" class="img-fluid">
+              </div>
+              <div class="card-body">
+                <div class="card-category-box">
+                  <div class="card-category">
+                    <h6 class="category">
+                      <%= blog.category %>
+                    </h6>
+                  </div>
+                </div>
+                <h3 class="card-title">
+                  <%= blog.title %>
+                </h3>
+                <p class="card-description">
+                  <%- blog.content.substring(0, 150) %>....
+                </p>
+                <a class="ion-tab-button chev" href="/blogs/<%= blog._id %>">
+                  Read More <i class="ion-chevron-right"></i>
+                </a>
+              </div>
+              <div class="card-footer">
+                <div class="post-author">
+                  <ion-avatar>
+                    <img id="dp" alt="dp" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                  </ion-avatar>
+                  <span class="author">
+                    <%= blog.author.username %>
+                  </span>
+                </div>
+                <div class="post-date">
+                  <span class="ion-ios-clock-outline"></span>
+                  <%= moment(blog.created).fromNow() %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </section>
+  <!--/ Section Blog End /-->
+
+  <!--/ Section Contact-Footer Star /-->
+  <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
+    style="background-image: url(img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="contact-mf">
+            <div id="contact" class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      Send Me Message
+                    </h5>
+                  </div>
+                  <div class="form-container">
+                    <form role="form" class="contactForm" action="/" method="post">
+                      <div class="row">
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                              pattern="[a-zA-Z][a-zA-Z ]{2,}" title="Name should not contain less than 3 characters"
+                              required />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email"
+                              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your Email" required />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                              pattern="[a-zA-Z][a-zA-Z ]{5,}" title="Please enter at least 6 chars" required />
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                          <div class="form-group">
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Message"
+                              minlength="10" maxlength="200" title="Please enter at least 10 chars"
+                              required="required"></textarea>
+                            <div class="validation"></div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <input type="submit" class="submit button button-a button-big button-rouded"
+                            value="Send Message">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">
+                      Get in Touch
+                    </h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      <%= contactDetails.lead %>
+                    </p>
+                    <ul class="list-ico">
+                      <% for(details of contactDetails.address) { %>
+                        <li><span class="<%= details.icon %>"></span>
+                          <%= details.text %>
+                        </li>
+                        <% } %>
+                    </ul>
+                  </div>
+                  <div class="socials">
+                    <ul>
+                      <% for(details of contactDetails.socials) { %>
+                        <li><a href="<%= details.link %>"><span class="ico-circle"><i
+                                class="<%= details.icon %>"></i></span></a></li>
+                        <% } %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="credits">
+              Designed by <a href="#">Shrawan Kumar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!--/ Section Contact-footer End /-->
+
+  <%- include("partials/footer") %>
