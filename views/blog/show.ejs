@@ -17,7 +17,7 @@
                 <hr style="border: 0.5px solid black; margin-top: 30px;"/>
             </div>
             <div class="content">
-                <p id="contents"><%= blog.content %></p>
+                <pre id="contents"><%= blog.content %></pre>
             </div>
 
             <% if(user && blog.author.id.equals(user._id)){%>
